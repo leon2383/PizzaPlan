@@ -1,1 +1,6 @@
-import { defineConfig } from "vite";\nexport default defineConfig({});\n
+
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  base: "/PizzaPlan/",
+});
