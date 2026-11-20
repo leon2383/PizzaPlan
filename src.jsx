@@ -58,7 +58,7 @@ export default function App(){
   return <div className="app">
     <header><div className="brand"><span className="pizza">🍕</span><div><h1>PizzaPlan</h1><small>Service · Dienstplanung</small></div></div><span className="tag">BETA</span></header>
     <main>
-      <section className="week panel"><button className="arrow" onClick={()=>setOffset(v=>v-1}>‹</button><div className="weekinfo"><strong>Kalenderwoche {weekNumber(monday)}</strong><span>{fmt(monday)} – {fmt(dateFor(6))}</span></div><button className="arrow" onClick={()=>setOffset(v=>v+1)}>›</button></section>
+      <section className="week panel"><button className="arrow" onClick={()=>setOffset(v=>v-1)}>‹</button><div className="weekinfo"><strong>Kalenderwoche {weekNumber(monday)}</strong><span>{fmt(monday)} – {fmt(dateFor(6))}</span></div><button className="arrow" onClick={()=>setOffset(v=>v+1)}>›</button></section>
       <section className="holiday panel"><div><strong>Feiertagsmodus</strong><p>Mittwoch–Freitag mit 2 Mitarbeitenden planen</p></div><button className={"switch "+(holiday?"on":"")} role="switch" aria-checked={holiday} onClick={()=>setHoliday(v=>!v)}><span/></button></section>
       <section><div className="sectionhead"><h2>Wochenplan</h2><button className="plain" onClick={clearWeek}>Woche leeren</button></div>
       {days.map((day,i)=><article className="day panel" key={day.name}><div className="dayhead"><h3>{day.name}</h3><span>{fmt(dateFor(i))}</span></div>
