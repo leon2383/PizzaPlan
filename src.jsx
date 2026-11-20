@@ -1,5 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
-import "./style.css";\nif ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(()=>{}));
+
+import "./style.css";
+if ("serviceWorker" in navigator) window.addEventListener("load", () => navigator.serviceWorker.register(import.meta.env.BASE_URL + "sw.js").catch(()=>{}));
+
 
 const STORE_KEY = "pizzaplan_v1";
 const days = [
